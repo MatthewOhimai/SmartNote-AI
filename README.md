@@ -102,10 +102,21 @@ Code quality and security are paramount. All development strictly adheres to the
    ```
 4. Set up Environment Variables:
    Create a `.env` file inside `backend/` and provide your Gemini API key:
+
    ```env
    GEMINI_API_KEY=your_google_gemini_api_key_here
    GEMINI_MODEL=gemini-2.5-flash
+
+   # Production Database (Optional, defaults to SQLite)
+   DATABASE_URL=postgres://user:password@host:port/dbname
+
+   # Production Security
+   DEBUG=False
+   SECRET_KEY=your_secure_random_secret_key
+   ALLOWED_HOSTS=yourdomain.com,anotherdomain.com
+   CSRF_TRUSTED_ORIGINS=https://yourdomain.com
    ```
+
 5. Apply database migrations:
    ```bash
    python manage.py makemigrations
