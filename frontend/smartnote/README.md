@@ -11,6 +11,26 @@ Currently, two official plugins are available:
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application uses environment variables for configuration. Create a `.env` file in the root of the `frontend/smartnote` directory with the following variables:
+
+- `VITE_API_URL`: The base URL for the backend API (e.g., `https://api.example.com/api`).
+
+Example `.env` file:
+```env
+VITE_API_URL=http://localhost:8000/api
+```
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Set up your `.env` file.
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
